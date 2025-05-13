@@ -8,6 +8,10 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  overflow: hidden;
 }
 
 .container {
@@ -59,11 +63,17 @@ footer {
   padding: 20px 0;
 }
 
-.goog-logo-link {
-  display: none !important;
-}
-.goog-te-gadget {
-  font-size: 14px;
-  color: #333;
-}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  z-index: 9999;}
+
+
 
