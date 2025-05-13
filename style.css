@@ -58,3 +58,12 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+.goog-logo-link {
+  display: none !important;
+}
+.goog-te-gadget {
+  font-size: 14px;
+  color: #333;
+}
+
