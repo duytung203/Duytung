@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duy Tung</title>
+  <title>Duy Tùng Web</title>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -14,21 +14,76 @@
       <h1>Hoc Git và web</h1>
       <nav>
         <a href="index.html" target="_blank"> Trang chủ</a>
-        <a href="login.html">Dang nhap</a>
+        <a href="login.html">Đăng nhập</a>
         <a href="#">Liên hệ</a>
       </nav>
     </div>
   </header>
   <main>
     <div class="container">
-      <h2>Bui Duy Tung</h2>
-      <p>Noi dung cua trang.</p>
-      <button id="helloBtn">Bấm vào tôi!</button>
-    </div>
+      <h2>Duy Tùng</h2>
+      <p>Tìm hiểu về git (gitlab/github)
+        <ul>
+          <li>Git init ( khởi tạo git repository mới )</li>
+          <li>Git add . (thêm tất cả các file đã thay đổi vào staging area)</li>
+          <li>Git commit -m”name” (tạo commit mới)</li>
+          <li>Git log –oneline (hiển thị lịch sử commit ngắn gọn)</li>
+          <li>Git status (trạng thái của file)</li>
+          <li>Git branch (ds các nhánh)</li>
+          <li>Git brabch tennhanh (tạo nhánh mới)</li>
+          <li>Git merge (gộp nhánh)</li>
+          <li>Git checkout tennhanhdatao ( chuyển sang làm việc ở nhánh mới)</li>
+          <li>Git switch (như checkout)</li>
+          <li>Git push ( đẩy source code vào github)</li>
+          <li>Git pull (lấy source về local)</li>
+          <li>Git remote add ten  https://github.com/username/repo.git (tạo remote ket noi vs github)</li></p>  </div>
+        </ul>
+<div class = text1>
+  <p><h2>Các quy ước đặt tên nhánh:</h2>
+    <ul>
+      <li>Viết thường (Lowercase): không sử dụng chữ in hoa trong tên nhánh, chỉ dùng chữ thường.</li>
+      <li>Sử dụng gạch nối (Hyphen separated): nếu tên nhánh nhiều hơn 1 từ, hãy phân tách chúng bằng dấu gạch nối tuân theo nguyên tắc kebab-case.</li>
+      <li>Chỉ sử dụng ký tự a-z, 0-9: Chỉ sử dụng các ký tự chữ và số cùng với dấu gạch nối trong tên nhánh.</li>
+      <li>Không sử dụng dấu gạch nối liên tục (–): Nếu bạn có các loại nhánh (branch type) thì nên sử dụng dạng tiền tố (prefix) và dấu gạch chéo (/) để ngăn cách. </li>
+      <li>Tránh việc kết thúc tên nhánh bằng dấu gạch nối: Nó không có ý nghĩ vì dấu gạch nối được dùng để ngăn cách các từ và không có từ nào ở cuối cần để phân tách.</li>
+      <li>Sử dụng các tên mô tả, ngắn gọn và rõ ràng: để giải thích những gì được thực hiện trên nhánh.</li>
+    </ul>
+   </p>
+</div>
+
+<div class="text2">
+  <h2>Tiền tố quy ước tên nhánh:</h2>
+<ul>
+  <li><strong>eature:</strong> tiền tố này được sử dụng để truyền tải một tính năng mới sẽ được phát triển. Ví dụ: feature/add-filters;</li>
+  <li><strong>release:</strong> được sử dụng để chuẩn bị cho 1 bản phát hành(release) mới. Tiền tố release/ thường được sử dụng để thực hiện các tác vụ cuối cùng trước khi thực hiện hợp nhất(merging) các bản cập nhật mới nhất từ nhánh chính(master) để tạo 1 bản release. Ví dụ: release/v1.0.0.1-beta;</li>
+  <li><strong>bugfix:</strong>được sử dụng để truyền tải thông điệp bạn đang giải quyết 1 lỗi trong code và lỗi này thường liên quan đến 1 vấn đề hoặc chức năng nào đó. Ví dụ: bugfix/sign-in-flow;</li>
+  <li><strong>hotfix:</strong>tương tự như bugfix, nhưng nó liên quan đến việc sửa một lỗi nghiêm trọng trên môi trường production. Ví dụ: hotfix/cors-error;</li>
+  <li><strong>docs:</strong> được sử dụng trong trường hợp bạn cần viết một số tài liệu. Ví dụ: docs/quick-start;</li>
+</ul>
+
+<h2>Những lưu ý khi sử dụng Git merge:</h2>
+
+- Kiểm tra nhánh hiện tại đã đúng nhánh cần được merge hay chưa.<br>
+- Cần cập nhật trạng thái mới nhất cho nhánh hiện tại trước khi merge để tránh các vấn đề xung đột sau này.<br>
+- Không nên merge trực tiếp vào nhánh chính (main, master): Đối với các dự án lớn, bạn nên thực hiện merge thông qua Pull Request để đảm bảo các thay đổi đều được kiểm duyệt trước khi thực hiện hợp nhất.<br>
+- Xóa các nhánh không còn được sử dụng sau khi merge để giữ cho mã nguồn được sạch sẽ.<br>
+- Khi có xung đột xảy ra, nên trao đổi với các thành viên khác trước khi lựa chọn đoạn mã cần được giữ lại. Điều này tránh xảy ra mất dữ liệu và tránh lỗi.<br>
+
+<h2>Giải quyết git Conflict:</h2>
+Khi thực hiện câu lệnh git merge và bị conflict. Bước đầu tiên cần tìm đến file bị báo conflict. <br>
+- Với VS Code, nó sẽ highlight đoạn code bị conflict.<br>
+- Ở đây có 3 lựa chọn có thể chọn nhanh:
+<ul>
+  <li><strong>Accept Current Change:</strong> Tức là đoạn code conflict đó sẽ được thay thế bằng đoạn code của bạn, code mà bạn đang chỉnh sửa.</li>
+	 <li><strong>Accept Incoming Change:</strong> Chấp nhận thay thế bằng đoạn code lấy từ nhánh code khác về mà do developer khác sửa.</li>
+	 <li><strong>Accept Both Change:</strong> Lựa chọn này sẽ chấp nhận đoạn code của cả hai, cả của bạn và của developer khác. Thường là nó sẽ remix hai đoạn code lại với nhau, tỷ lệ code chạy được sau đó là rất thấp.</li>
+	 <li><strong>Giải pháp thủ công:</strong> Xóa hết đoạn code trong block conflict và tự viết lại code trong đó.</li>
+</ul><button id="helloBtn">Bấm vào tôi!</button>
+	</div>
   </main>
   <footer>
     <div class="container">
-      <p>Email<a href="#">duytung2506@gmail.com</a></p>
+      <p>Email: <a href="#">duytung2506@gmail.com</a></p>
     </div>
   </footer>
   <script src="scrip.js"></script>

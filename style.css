@@ -1,8 +1,7 @@
-
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -10,20 +9,42 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  cursor: none;
-  overflow: hidden;
+  font-size: 16px;
+  background-color: #57a36e;
+  overflow-y: auto;   
+}
+
+html {
+  height: auto;
 }
 
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+.text1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.text2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
 
 header {
-  background: #333;
-  color: #fff;
+  background-image: url(img/hinh-nen-bau-troi-ban-ngay.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #000000;
   padding: 20px 0;
 }
 
@@ -38,7 +59,7 @@ header nav {
 header nav a {
   color: #fff;
   margin-left: 15px;
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 
 header::after {
@@ -49,31 +70,32 @@ header::after {
 
 
 main {
-    text-align:center;
-  padding: 380px 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  padding: 40px 20px; 
   background: #f4f4f4;
 }
 
 
 footer {
-  background: #74e770;
-  
-  color: #e46868;
+  background: #587a96;
+  color: #ffffff;
   text-align: center;
-  padding: 20px 0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid red;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease;
-  z-index: 9999;}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
 
-
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
